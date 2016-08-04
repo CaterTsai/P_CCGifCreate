@@ -139,7 +139,7 @@ namespace P_CCGifCreate
                 savePhotoOrderEachUnit(exParameterSingleton.getInstance.gifTempFolder);
 
                 setInfo("Create gif...");
-                gifCreater.createGif(tbSerialNo.Text);
+                BatExe.createGif(tbSerialNo.Text);
 
                 //setInfo("Upload to server...");
                 //uploadGif(tbSerialNo.Text);
@@ -173,6 +173,8 @@ namespace P_CCGifCreate
             clearPhotoOrder();
             clearPhotoOrderEachUnit();
             GC.Collect();
+
+            BatExe.clearPhoto();
         }
 
         //-------------------------------------

@@ -4,7 +4,7 @@ using System.IO;
 
 namespace P_CCGifCreate.BatExecuter
 {
-    class gifCreater
+    class BatExe
     {
         static public void createGif(string serialNo)
         {
@@ -25,6 +25,25 @@ namespace P_CCGifCreate.BatExecuter
                 Console.WriteLine(ex.StackTrace.ToString());
             }
 
+        }
+
+        static public void clearPhoto()
+        {
+            Process clearBat_ = new Process();
+
+            try
+            {
+                clearBat_.StartInfo.FileName = "clearPhotos.bat";
+                clearBat_.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory() + "\\" + "data\\";
+                clearBat_.StartInfo.CreateNoWindow = false;
+                clearBat_.Start();
+                clearBat_.WaitForExit();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace.ToString());
+            }
         }
     }
 }
