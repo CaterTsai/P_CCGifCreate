@@ -10,7 +10,9 @@ namespace P_CCGifCreate
     {
         public string cameraFolderPath { get; private set; }
         public string gifTempFolder { get; private set; }
+        public string gifTempFrameFolder { get; private set; }
         public string photoframePath { get; private set; }
+
 
         public string gifResultFolder { get; private set; }
         public string gifBat { get; private set; }
@@ -34,6 +36,7 @@ namespace P_CCGifCreate
 
                 cameraFolderPath = (string)config_["cameraFolderPath"];
                 gifTempFolder = (string)config_["gifTempFolder"];
+                gifTempFrameFolder = (string)config_["gifTempFrameFolder"];
                 photoframePath = (string)config_["photoframePath"];
 
                 gifResultFolder = (string)config_["gifResultFolder"];
@@ -56,8 +59,9 @@ namespace P_CCGifCreate
         private void setDefault()
         {
             //Default value
-            cameraFolderPath = "data/camPhotos/";
+            cameraFolderPath = "data/camPhotos";
             gifTempFolder = "data/gifTemp/";
+            gifTempFrameFolder = "data/gifTempFrame/";
             photoframePath = "data/images/photoFrame.png";
 
             gifResultFolder = "data/gifResult/";
@@ -80,7 +84,7 @@ namespace P_CCGifCreate
         private exParameterSingleton()
         {
             setDefault();
-            //loadConfig();
+            loadConfig();
         }
 
         //------------------------------------------

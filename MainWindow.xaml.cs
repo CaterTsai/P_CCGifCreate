@@ -99,6 +99,16 @@ namespace P_CCGifCreate
             foreach (var photoUnit in _camMgr)
             {
                 string fullPath_ = path + photoUnit.Key.ToString() + ".jpg";
+                _photoFrameMixer.Save(photoUnit.Value.photoBitmap, fullPath_);
+            }
+        }
+
+        //-------------------------------------
+        public void savePhotoOrderEachUnitWithPhotoFrame(string path)
+        {
+            foreach (var photoUnit in _camMgr)
+            {
+                string fullPath_ = path + photoUnit.Key.ToString() + ".jpg";
                 _photoFrameMixer.addPhotoframeAndSave(photoUnit.Value.photoBitmap, fullPath_);
             }
         }
@@ -135,16 +145,18 @@ namespace P_CCGifCreate
             if (!string.IsNullOrWhiteSpace(tbSerialNo.Text))
             {
 
-                setInfo("Mix photo frame...");
+                setInfo("Photo Processing...");
                 savePhotoOrderEachUnit(exParameterSingleton.getInstance.gifTempFolder);
+                //savePhotoOrderEachUnitWithPhotoFrame(exParameterSingleton.getInstance.gifTempFrameFolder);
 
                 setInfo("Create gif...");
                 BatExe.createGif(tbSerialNo.Text);
+                //BatExe.createGifwithFrame(tbSerialNo.Text);
 
-                //setInfo("Upload to server...");
-                //uploadGif(tbSerialNo.Text);
+                setInfo("Upload to server...");
+                uploadGif(tbSerialNo.Text);
 
-                //_qrConnector.sendQRInfo(exParameterSingleton.getInstance.qrShareUrl + tbSerialNo.Text, tbSerialNo.Text);
+                _qrConnector.sendQRInfo(exParameterSingleton.getInstance.qrShareUrl + tbSerialNo.Text, tbSerialNo.Text);
 
                 clearAllPhoto();
                 setInfo("Complete");

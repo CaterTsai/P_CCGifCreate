@@ -40,8 +40,8 @@
             <ComboBox x:Name="cbCam7" Margin="0,237,95,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Grid.Column="2" Grid.Row="1" Background="{x:Null}"/>
             <Label x:Name="label_Copy5" Content="Camera 7" Margin="0,0,77,233" VerticalAlignment="Bottom" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Width="156" Grid.Column="2" Grid.Row="1"/>
         </Grid>
-        <Label x:Name="infoDispaly" Content="Ready..." HorizontalAlignment="Left" Margin="10,646,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="20" Width="410"/>
-        <Grid HorizontalAlignment="Left" Height="111" Margin="685,570,0,0" VerticalAlignment="Top" Width="538">
+        <Label x:Name="infoDispaly" Content="Ready..." Margin="553,574,0,0" Background="{x:Null}" FontSize="20" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="410"/>
+        <Grid Margin="10,570,0,0" HorizontalAlignment="Left" Width="538" Height="111" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="135*"/>
                 <ColumnDefinition Width="134*"/>
@@ -50,13 +50,13 @@
                 <RowDefinition Height="55*"/>
                 <RowDefinition Height="56*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="tbSerialNo" HorizontalAlignment="Left" Height="23" Margin="82,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178"/>
+            <TextBox x:Name="tbSerialNo" Margin="82,14,10,18" TextWrapping="Wrap"/>
             <Label x:Name="label1" Content="Choose Photos ID:" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Grid.Column="1" Height="25" Width="113"/>
-            <Button x:Name="btnDisplay" Content="Display" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="113" Height="32" FontSize="15" Click="btnDisplay_Click" Grid.Column="1" Grid.Row="1"/>
-            <Button x:Name="btnCreate" Content="Create GIF" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Width="113" Height="32" FontSize="15" Grid.Column="1" Grid.Row="1" Click="btnCreate_Click"/>
+            <Button x:Name="btnDisplay" Content="Display" Margin="15,10,0,0" FontSize="15" Click="btnDisplay_Click" Grid.Column="1" Grid.Row="1" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="113"/>
+            <Button x:Name="btnCreate" Content="Create GIF" Margin="145,10,0,0" FontSize="15" Grid.Column="1" Grid.Row="1" Click="btnCreate_Click" HorizontalAlignment="Left" Width="113" Height="32" VerticalAlignment="Top"/>
             <ComboBox x:Name="cbPhotoOrder" Margin="0,12,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Grid.Column="1" Background="{x:Null}"/>
-            <Label x:Name="label1_Copy" Content="Serial No :" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="25" Width="72"/>
-            <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="147,10,0,0" VerticalAlignment="Top" Width="113" Height="32" FontSize="15" Grid.Row="1" Click="btnClear_Click"/>
+            <Label x:Name="label1_Copy" Content="Serial No :" Margin="10,12,188,18"/>
+            <Button x:Name="btnClear" Content="Clear" Margin="147,10,0,0" FontSize="15" Grid.Row="1" Click="btnClear_Click" HorizontalAlignment="Left" Width="113" Height="32" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Window>

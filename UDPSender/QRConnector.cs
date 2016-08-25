@@ -49,7 +49,7 @@ namespace P_CCGifCreate.UDPSender
         {
             if(_isSetup)
             {
-                string senderMsg_ = udpBeginEndTex + url + udpIntervalTex + serialNo + udpBeginEndTex;
+                string senderMsg_ = udpBeginEndTex + url + udpIntervalTex + "序號:"+ serialNo + udpBeginEndTex;
                 byte[] sourceData_ = Encoding.UTF8.GetBytes(senderMsg_);
 
                 _QRServer.SendTo(sourceData_, sourceData_.Length, SocketFlags.None, _RemoteEndPoint);

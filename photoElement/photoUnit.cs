@@ -49,13 +49,26 @@ namespace P_CCGifCreate.photoElement
         //-------------------------------------
         private void setPhoto(string uri)
         {
+            //photoBitmap = new BitmapImage();
+            //photoBitmap.BeginInit();
+            //photoBitmap.UriSource = new Uri(uri);
+            //photoBitmap.CacheOption = BitmapCacheOption.OnLoad;
+            //photoBitmap.EndInit();
+            //photoBitmap.Freeze();
+
+            //photo.Source = photoBitmap;
+
+            string filepath_ = uri;
+            FileStream FStream = new FileStream(filepath_, FileMode.Open);
+
             photoBitmap = new BitmapImage();
             photoBitmap.BeginInit();
-            photoBitmap.UriSource = new Uri(uri);
+            photoBitmap.StreamSource = FStream;
             photoBitmap.CacheOption = BitmapCacheOption.OnLoad;
             photoBitmap.EndInit();
             photoBitmap.Freeze();
-            
+            FStream.Close();
+
             photo.Source = photoBitmap;
         }
 
@@ -68,7 +81,8 @@ namespace P_CCGifCreate.photoElement
         //-------------------------------------
         private string getUri(string photoID)
         {
-            return Directory.GetCurrentDirectory() + "\\" + exParameterSingleton.getInstance.cameraFolderPath + photoID + "_" + cameraNo.ToString().PadLeft(2, '0') + ".jpg";
+            //return Directory.GetCurrentDirectory() + "\\" + exParameterSingleton.getInstance.cameraFolderPath + photoID + "_" + cameraNo.ToString().PadLeft(2, '0') + ".jpg";
+            return exParameterSingleton.getInstance.cameraFolderPath + photoID + "_" + cameraNo.ToString().PadLeft(2, '0') + ".jpg";
         }
         #endregion
 
