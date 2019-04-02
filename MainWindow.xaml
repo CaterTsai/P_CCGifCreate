@@ -39,6 +39,9 @@
             <Image x:Name="imgCam7" Margin="0,51,9,52" HorizontalAlignment="Right" Width="293" Grid.Column="2" Grid.Row="1"/>
             <ComboBox x:Name="cbCam7" Margin="0,237,95,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Grid.Column="2" Grid.Row="1" Background="{x:Null}"/>
             <Label x:Name="label_Copy5" Content="Camera 7" Margin="0,0,77,233" VerticalAlignment="Bottom" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Width="156" Grid.Column="2" Grid.Row="1"/>
+            <Image x:Name="imgCam8" Margin="0,51,9,52" HorizontalAlignment="Right" Width="293" Grid.Column="3" Grid.Row="1"/>
+            <ComboBox x:Name="cbCam8" Margin="0,237,95,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" Grid.Column="3" Grid.Row="1" Background="{x:Null}"/>
+            <Label x:Name="label_Copy6" Content="Camera 8" Margin="0,0,77,233" VerticalAlignment="Bottom" HorizontalAlignment="Right" HorizontalContentAlignment="Center" Width="156" Grid.Column="3" Grid.Row="1"/>
         </Grid>
         <Label x:Name="infoDispaly" Content="Ready..." Margin="553,574,0,0" Background="{x:Null}" FontSize="20" Height="36" VerticalAlignment="Top" HorizontalAlignment="Left" Width="410"/>
         <Grid Margin="10,570,0,0" HorizontalAlignment="Left" Width="538" Height="111" VerticalAlignment="Top">

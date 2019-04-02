@@ -75,7 +75,7 @@ namespace P_CCGifCreate
             qrIP = "127.0.0.1";
             qrPort = 11999;
 
-            cameraNum = 7;
+            cameraNum = 8;
         }
 
         #region Singleton

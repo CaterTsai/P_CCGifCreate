@@ -64,6 +64,7 @@ namespace P_CCGifCreate
             _camMgr.Add(4, new photoUnit(4, ref imgCam5, ref cbCam5));
             _camMgr.Add(5, new photoUnit(5, ref imgCam6, ref cbCam6));
             _camMgr.Add(6, new photoUnit(6, ref imgCam7, ref cbCam7));
+            _camMgr.Add(7, new photoUnit(7, ref imgCam8, ref cbCam8));
         }
 
         //-------------------------------------
@@ -153,10 +154,10 @@ namespace P_CCGifCreate
                 BatExe.createGif(tbSerialNo.Text);
                 //BatExe.createGifwithFrame(tbSerialNo.Text);
 
-                setInfo("Upload to server...");
-                uploadGif(tbSerialNo.Text);
+                //setInfo("Upload to server...");
+                //uploadGif(tbSerialNo.Text);
 
-                _qrConnector.sendQRInfo(exParameterSingleton.getInstance.qrShareUrl + tbSerialNo.Text, tbSerialNo.Text);
+                //_qrConnector.sendQRInfo(exParameterSingleton.getInstance.qrShareUrl + tbSerialNo.Text, tbSerialNo.Text);
 
                 clearAllPhoto();
                 setInfo("Complete");
